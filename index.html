@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Quotation Builder</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsIDXPi/mKP7LMhCDXOveGPMSYdddGfGz/LzDuxcsjsS0x7z5/Wsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+<body>
+    <div class="main-container" id="quotationContent"> <div class="header-top">
+            <div class="quotation-heading">
+                QUOTATION
+            </div>
+        </div>
+
+        <div class="section-row">
+            <div class="left-section">
+                <div id="companyNameDisplay" class="company-name">LASERS ENGARVERS (Pvt) Ltd.</div>
+                <input type="text" id="companyNameInput" class="input-field company-name-input" style="display: none;" value="LASERS ENGARVERS (Pvt) Ltd.">
+
+                <div class="input-group">
+                    <label for="slogan">Slogan:</label>
+                    <input type="text" class="input-field" id="slogan" value="Where Quality not compromised">
+                </div>
+                <div class="input-group">
+                    <label for="companyAddress">Address:</label>
+                    <textarea class="input-field" id="companyAddress">Address, P.No.SA 06 ST-18 33I/C Korangi
+City, Karachi</textarea>
+                </div>
+                <div class="input-group">
+                    <label for="companyPhone">Phone:</label>
+                    <input type="text" class="input-field" id="companyPhone" value="00923312551094 / 00923323905847">
+                </div>
+            </div>
+
+            <div class="right-section">
+                <div class="input-group">
+                    <label for="dateInput">DATE:</label>
+                    <input type="date" class="input-field" id="dateInput">
+                </div>
+                <div class="input-group">
+                    <label for="quotationNumberInput">Quotation #</label>
+                    <input type="text" class="input-field" id="quotationNumberInput">
+                </div>
+            </div>
+        </div>
+
+        <div class="section-row">
+            <div class="left-section" style="width: 100%; flex-basis: 100%;">
+                <div class="input-group">
+                    <label for="quotationForHeading">Quotation For (Heading):</label>
+                    <input type="text" class="input-field" id="quotationForHeading" value="Quotation For:">
+                </div>
+                <div class="input-group">
+                    <label for="quotationForDetails">Quotation For (Details):</label>
+                    <textarea class="input-field" id="quotationForDetails">ADDRESS:
+CITY : KARACHI</textarea>
+                </div>
+                <p class="introductory-text">
+                    We thank you for giving us the opportunity of Mechanical Enclosure.
+                    We are pleased to submit our best Techno grade offer as per the
+                    giving Details.
+                </p>
+            </div>
+        </div>
+
+        <div id="quotationSectionsContainer" class="quotation-sections-container">
+            </div>
+
+        <div class="remarks-and-totals-section">
+            <div class="input-group" style="margin-top: 40px;">
+                <label for="remarks">Remarks:</label>
+                <textarea class="input-field" id="remarks" placeholder="Enter additional remarks here..."></textarea>
+            </div>
+
+            <div class="totals-section">
+                <div>
+                    <label>SUB TOTAL:</label>
+                    <span class="amount" id="subTotal">0.00 Rs</span>
+                </div>
+                <div>
+                    <label>GST 18%:</label>
+                    <span class="amount" id="gstAmount">0.00 Rs</span>
+                </div>
+                <div class="total-amount">
+                    <label>TOTAL AMOUNT:</label>
+                    <span class="amount" id="totalAmount">0.00 Rs</span>
+                </div>
+            </div>
+        </div>
+    </div> <div class="button-container">
+        <button id="addSectionBtn" class="add-section-btn"><i class="fas fa-plus"></i> Add New Section</button>
+        <button id="newQuotationBtn" class="new-quotation-btn"><i class="fas fa-file"></i> New Quotation</button>
+        <button id="generatePdfBtn" class="generate-pdf-btn"><i class="fas fa-file-pdf"></i> Generate PDF</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
