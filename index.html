@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dynamic Quotation Builder</title>
+    <title> QuotationBuilder</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsIDXPi/mKP7LMhCDXOveGPMSYdddGfGz/LzDuxcsjsS0x7z5/Wsg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 <body>
     <div class="main-container" id="quotationContent"> <div class="header-top">
-            <div class="quotation-heading">
-                QUOTATION
-            </div>
+           <h1 class="main-heading">Quotation</h1>
         </div>
 
         <div class="section-row">
@@ -41,7 +39,7 @@ City, Karachi</textarea>
                     <input type="date" class="input-field" id="dateInput">
                 </div>
                 <div class="input-group">
-                    <label for="quotationNumberInput">Quotation #</label>
+                    <label for="quotationNumberInput">Quotation#</label>
                     <input type="text" class="input-field" id="quotationNumberInput">
                 </div>
             </div>
@@ -50,13 +48,19 @@ City, Karachi</textarea>
         <div class="section-row">
             <div class="left-section" style="width: 100%; flex-basis: 100%;">
                 <div class="input-group">
-                    <label for="quotationForHeading">Quotation For (Heading):</label>
-                    <input type="text" class="input-field" id="quotationForHeading" value="Quotation For:">
+                    <label for="customerNameSelect">Quotation For:</label> <select class="input-field" id="customerNameSelect"> <option value="">-- Select Client --</option>
+                        <option value="Client A Corp">Client A Corp</option>
+                        <option value="ABC Industries">ABC Industries</option>
+                        <option value="XYZ Solutions">XYZ Solutions</option>
+                        </select>
                 </div>
                 <div class="input-group">
-                    <label for="quotationForDetails">Quotation For (Details):</label>
-                    <textarea class="input-field" id="quotationForDetails">ADDRESS:
-CITY : KARACHI</textarea>
+                    <label for="customerAddressInput">Address:</label>
+                    <input type="text" class="input-field" id="customerAddressInput" value="">
+                </div>
+                <div class="input-group">
+                    <label for="customerCellNoInput">Cell No.:</label>
+                    <input type="text" class="input-field" id="customerCellNoInput" value="">
                 </div>
                 <p class="introductory-text">
                     We thank you for giving us the opportunity of Mechanical Enclosure.
